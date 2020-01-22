@@ -1,0 +1,14 @@
+:root{
+    --theme-color: #8080ff;
+    --main-color: white;
+}
+
+.net-connection p{
+    position: fixed; 
+    left: 25%;
+    top: 9%;
+
+    width: 50%;
+    background: var(--main-color);
+    border-radius: 5px;
+}

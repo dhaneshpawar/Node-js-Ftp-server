@@ -1,0 +1,139 @@
+:root{
+    --theme-color: #8080ff;
+    --main-color: white;
+}
+
+a{
+    text-decoration: none;
+}
+.notificationcontainer{
+    background: var(--main-color);
+    border-radius: 5px;
+    margin: 12px; 
+
+}
+
+.notificationcontainer p{
+    font-size: 18px;
+    font-family: "Lobster", Arial, Helvetica, sans-serif;
+    color: var(--theme-color);
+    padding-top: 2%;
+    padding-left: 5%;
+}
+
+.removeallquestion p{
+display: inline;
+}
+.removeallquestion p{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--theme-color);
+    margin: 2%;
+}
+
+.removeallquestion button{
+    height: auto;
+    width: 20%;
+   
+    font-size: 90%; 
+    background-color: var(--theme-color);
+    color: var(--main-color);
+    border: 2px solid var(--theme-color);
+    border-radius: 3%;
+    cursor: pointer;
+    margin: 2%;
+}
+
+.removeButton{
+    height: auto;
+    width: 20%;
+   
+    font-size: 90%; 
+    background-color: var(--theme-color);
+    color: var(--main-color);
+    border: 2px solid var(--theme-color);
+    border-radius: 3%;
+    cursor: pointer;
+    margin: 2%;
+    float: right;
+}
+
+.all{
+    width: 30%;    
+}
+
+.hr-shadow 
+{
+  width: 90%;
+  border: 1px var(--theme-color) solid; 
+}
+
+
+.notification2{
+    background: var(--theme-color);
+    border-radius: 2px;
+    margin: 4px;
+    padding: 1px;
+}
+
+
+/*mobile*/
+@media screen and (min-width : 800px)
+{
+    .notification p{
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--theme-color);
+        margin: 2px;
+    }
+    .notification img{
+        height: 63px;
+        width: 63px;
+        border-radius: 5px;
+        float: left;
+        margin-top: 2px;
+        margin-left: 20px;
+    }
+    
+}
+
+
+/*computer*/
+@media screen and (max-width : 800px)
+{
+    .notification p{
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--theme-color);
+        margin: 1px;
+    }
+    .notification img{
+        height: 63px;
+        width: 63px;
+        border-radius: 5px;
+        float: left;
+        margin: 10px;
+    }
+
+    
+}
+
+
+.notification img{
+    display: inline;
+}
+
+
+.requestButton{
+    height: auto;
+    width: 20%;
+   
+    font-size: 90%; 
+    background-color: var(--theme-color);
+    color: var(--main-color);
+    border: 2px solid var(--theme-color);
+    border-radius: 3%;
+    cursor: pointer;
+    margin: 2%;
+    margin-bottom: -5%;
+}

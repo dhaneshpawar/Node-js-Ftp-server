@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--code for logo-->
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="images/logo.png">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nestimatic</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--style, jquery and javascript -->
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/help.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/net-connection.css"/>
+
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <script src="jquery/theme-color.js"></script>    
+
+    </head>
+    <body>
+            <div class="net-connection">
+                    <p id="ooUpdate" style="text-align: center"></p>
+                 </div>
+
+        <!--Nestimatic Head-->
+        <div id="wrapper">
+            <center>
+                <h1>Nestimatic</h1>
+                <!--code for backbutton-->
+                <a href="nestimatic">
+                    <button class="backButton">
+                        <div class="insideOptionsMenu">
+                            <div class="arrowLine up"></div>
+                            <div class="mid-line"></div>
+                            <div class="arrowLine down"></div>
+                        </div>
+                    </button>
+                </a>
+        
+            </center><br><br>
+        </div>
+        <!--help div started-->
+        <div id="help" class="myhelp"><br>
+            <div class="help">
+                <h1>Help</h1>
+                <center>
+                    <p>Tell us, How can we help you ?</p><br>
+                    <form id="info-form" method="POST" action="nestimaticfromhelp">
+                    <textarea placeholder="Enter your issue here ..." name="helppara" id="help" cols="30" rows="12"></textarea>
+                    <input type="submit" value="Submit"/>
+                </center><br><br>
+            </div><br>
+        </div>
+        <script src="jquery/net-connection.js"></script>     
+    </body>
+</html>

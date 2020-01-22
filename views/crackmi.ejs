@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="images/logo.png">
+
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes"> 
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+        <link rel="apple-touch-icon-precomposed" href="images/logo.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="images/logo.png">
+        <meta name="msapplication-TileColor" content="#3372DF">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CrackMi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--style, jquery and javascript -->
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/crackmi.css"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/net-connection.css"/>
+
+        <script src="jquery/jquery-3.2.1.min.js"></script>
+
+        <script src="jquery/crackmi.js"></script>
+  
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <script src="jquery/theme-color.js"></script>    
+
+    </head>
+<body>
+        <div class="net-connection">
+                <p id="ooUpdate" style="text-align: center"></p>
+             </div>
+
+    <!--Nestimatic Head-->
+    <div id="wrapper">
+        <center>
+            <h1>CrackMi</h1>
+            <a href="nestimatic">
+                <button class="backButton">
+                    <div class="insideOptionsMenu">
+                        <div class="arrowLine up"></div>
+                        <div class="mid-line"></div>
+                        <div class="arrowLine down"></div>
+                    </div>
+                </button>
+            </a>
+        </center><br><br>
+    </div>
+
+    <br>
+    <div class="mood-block">
+        <h1>Control your emotions or they will control you and that's why...</h1>
+    </div>
+
+    <div class="mood-block">
+        <center><strong><p>We stand for your emotions.</p></strong></center>            
+    </div>
+
+    <div class="mood-block">
+        <h1>Crackmi is here to make you happy and motivated !</h1>
+    </div>
+
+    <div id="preparing" class="mood-block">
+            <h1>Preparing to change your mood ... please wait...</h1>
+    </div>        
+    
+
+    <div class="mood-block">
+        <h1 id="neutral-head">Are you neutral ?</h1>
+        <center>
+            <a href="neutral"><button id="yes">Yes</button></a>
+            <button id="no">No</button>         
+        </center>   
+    </div>
+
+    
+    
+    <div id="select-mood-div-main" class="mood-div">
+        <h1>Select your mood !</h1><br><br>
+        
+        <center>
+            <button id="sad" class="select-mood-div" onclick="passmood(this.id)">Sad</button>         
+            <button id="demotivated" class="select-mood-div" onclick="passmood(this.id)">Demotivated</button>         
+        </center><br><br>
+
+        <center>
+            <button id="angry" class="select-mood-div" onclick="passmood(this.id)">Angry</button>         
+            <button id="boared" class="select-mood-div" onclick="passmood(this.id)">Boared</button>         
+        </center><br><br>
+            
+        <center>
+            <button id="stressed" class="select-mood-div" onclick="passmood(this.id)">Stressed</button>         
+            <button id="depressed" class="select-mood-div" onclick="passmood(this.id)">Depressed</button>         
+        </center><br><br>
+            
+        <center>
+            <button id="frustrated" class="select-mood-div" onclick="passmood(this.id)">Frustrated</button>         
+            <button id="irritated" class="select-mood-div" onclick="passmood(this.id)">Irritated</button>         
+        </center><br>          
+
+    </div>
+
+        <div id="select-reason-div" class="mood-div">
+            <h1>Select your reason !</h1><br><br>
+            <center>
+                <button id="family" onclick="passreason(this.id)">Family</button>         
+                <button id="friends" onclick="passreason(this.id)">Friends</button>         
+            </center><br><br>
+
+            <center>
+
+                <button id="relationship" onclick="passreason(this.id)">Relationship</button>         
+    
+                <button id="business" onclick="passreason(this.id)">Business</button>         
+            </center><br><br>
+      
+            <center>
+
+            <button id="education" onclick="passreason(this.id)">Education</button> 
+                <button id="job" onclick="passreason(this.id)">Job</button> 
+
+            </center><br><br>
+            <center>
+
+                <button id="marriage" onclick="passreason(this.id)">Marriage</button>
+                <button id="love" onclick="passreason(this.id)">Love</button>
+            </center><br><br>
+            <center>
+
+                <button id="failture" onclick="passreason(this.id)">Failture</button>
+
+                <button id="financial" onclick="passreason(this.id)">Financial</button>
+            </center><br><br>
+            <center>
+
+                <button id="quarrel" onclick="passreason(this.id)">Quarrel</button>
+                <button id="deathofsomeone" onclick="passreason(this.id)">Death of someone</button>
+            </center><br>
+            </div> <br>        
+            
+        <center>
+            <video controls class="videoshow" src="videos/mission.mp4"></video>
+        </center>
+   
+        <div class="contribute-block">
+                <center>
+                    <a href="contribute"><button id="yes">Click here</button></a>
+                    <p>to contribute by uploading content.</p>         
+                </center>   
+            </div>
+            
+            <script src="jquery/net-connection.js"></script>                
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="images/logo3.png">
+
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes"> 
+         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+         <link rel="apple-touch-icon-precomposed" href="images/logo3.png">
+
+         <!-- Tile icon for Win8 (144x144 + tile color) -->
+         <meta name="msapplication-TileImage" content="images/logo3.png">
+         <meta name="msapplication-TileColor" content="#3372DF">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crush-Match</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--style, jquery and javascript -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/mindmatch.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/net-connection.css"/>
+    <!--
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/help.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/feedback.css"/>
+    -->
+    <script src="jquery/jquery-3.2.1.min.js"></script>
+    <script src="jquery/mindmatch.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <script src="jquery/theme-color.js"></script>    
+
+</head>
+<body>
+        <div class="net-connection">
+                <p id="ooUpdate" style="text-align: center"></p>
+             </div>
+
+ <!--Nestimatic Head-->
+ <div id="wrapper">
+    <center>
+        <h1>MindMatch</h1>
+        <a href="nestimatic">
+            <button class="backButton">
+                <div class="insideOptionsMenu">
+                    <div class="arrowLine up"></div>
+                    <div class="mid-line"></div>
+                    <div class="arrowLine down"></div>
+                </div>
+            </button>
+        </a>
+       </center><br><br>
+</div>
+
+ <!--Settings div-->
+ <div id="settings" class="mysettings"><br>
+    
+    <!--nestimatic id-->
+    <div class="settings">
+
+        <input type="search" id="search-box"  placeholder="Search name here...">
+        
+        <div id="search-button" class="search-icon">
+            <div class="search-circle"></div>
+            <div class="search-line"></div>
+        </div><br>
+        
+        <div id="searching">
+            <center>
+                    <p>Searching ...</p>
+            </center>
+        </div>
+        
+        <div id="apendSearchResults">
+            <div id="proposalSentDiv">
+                <center>
+                    <p>Proposal sent</p><br><br>
+                </center>
+            </div>
+        </div>
+    </div>
+    <div class="settings">
+        <h1>Proposals you sent -</h1>
+        <center><p><%= sentVar %></p></center>
+    </div>
+    
+    <div class="settings">
+        <h1>Proposals you got -</h1>
+        <center><p><%= gotVar %></p></center>    
+    </div>
+    
+    <div  class="settings">
+        <h1>Your Matches -</h1>
+        <center><p><%= matchVar%></p></center>             
+       <%if(data == '')
+       {
+       }else{%>
+
+        <h1>Matched With</h1><br><br>
+
+        <%for(var i=0; i < data.length; i++)
+        {
+            if(data[i].sent == "yes")
+            {
+                var myimagepath = data[i].profileimageurl;
+                var splitty = myimagepath.split("public/");
+                var firstpartitis = splitty[0];
+                var lastpartitis = splitty[1];
+                if(data[i].got == "yes")
+                {%>
+                    <div id="search-results">
+                            <img src="<%= lastpartitis %>" />
+                              <p>NID : <%= data[i].nid %></p>
+                              <p><%= data[i].firstname %></p>
+                              <p><%= data[i].lastname %></p>
+                        </div><br><br><br>
+               <% }
+            }
+        }%>
+     
+
+      <% }
+       %>
+             
+        <center>
+            <p id="note">
+                Note: If you got proposal from the same person you have sent, then the name of that person will be shown here.
+            </p>
+            </center>
+    </div>
+  
+    <div class="settings">
+        <center>
+            <button id="Delete-all-proposals">Delete</button>
+            <p class="lastparagraph">sent proposals.</p>        
+        </center>
+    </div>
+
+    <div  class="privacy">
+        <h1>
+            About Privacy - 
+            <button id="show" >Show</button>
+            <button id="hide">Hide</button>
+        </h1><br>
+        <div id="privacy-notes">
+            <ul>
+                <li>Your name will not be shown to anyone at any cost because your Privacy is the main part of this service.</li>  
+                <li>Only you will be able to see to whoom and how many proposals you have sent.</li>
+                
+            <li> <strong>What if proposals match ?</strong> </li>
+                
+                <li>Means whenever you get proposal from the same person you have sent then we will show the name of that person in your matches section.</li>
+                <li>And as the matter of fact your proposal is matched with that person so that person will be able to see your name in his/her match section.</li>
+                <li>But note that only you and that perticular person is able to see this and no one else.</li>
+            </ul><br>
+        </div>
+
+    </div>
+
+
+</div>
+<script src="jquery/net-connection.js"></script>     
+</body>
+</html>

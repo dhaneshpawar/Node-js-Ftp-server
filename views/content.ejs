@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CrackMi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--style, jquery and javascript -->
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/content.css"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/net-connection.css"/>
+
+        <script src="jquery/jquery-3.2.1.min.js"></script>
+        <script src="jquery/content.js"></script>
+       
+        
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <script src="jquery/theme-color.js"></script>    
+
+    </head>
+    <body>
+            <div class="net-connection">
+                    <p id="ooUpdate" style="text-align: center"></p>
+                 </div>
+        
+        <!--Nestimatic Head-->
+        <div id="wrapper">
+            <center>
+                <h1>CrackMi</h1>
+                <a href="crackmi">
+                    <button class="backButton">
+                        <div class="insideOptionsMenu">
+                            <div class="arrowLine up"></div>
+                            <div class="mid-line"></div>
+                            <div class="arrowLine down"></div>
+                        </div>
+                    </button>
+                </a>
+            </center><br><br>
+        </div>
+        
+        <div id="showing" class="mood-block">
+            <h1>Showing next video...</h1>
+        </div>
+
+        <center>
+            <iframe id="content-1" class="videoshow" src="<%=data[0].src%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </center>
+        
+       
+        <div class="mood-block">
+            <h1 id="neutral-head">Does your mood changed ?</h1>
+            <center>
+                <button id="yes">Yes</button>
+                <button id="no">No</button>         
+            </center>
+            
+            <h1 id="final-div">
+            <center>
+                <p>Thanks ! for using this service.</p>
+                <p>Your mood is changed so, now you can go and do your further work.</p>
+                <p>Come back , whenever you want to be happy and motivated.</p>
+                <p>Because</p> 
+                <p class="talinep">WE STAND FOR YOUR EMOTION.</p> 
+            </center><br> 
+        </h1>
+        </div>
+
+        <script src="jquery/net-connection.js"></script>     
+    </body>
+</html>

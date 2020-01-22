@@ -1,0 +1,558 @@
+/*
+
+var(--theme-color)
+var(--main-color)
+
+*/ 
+
+:root{
+    --theme-color: #8080ff;
+    --main-color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/**computer*/    
+@media screen and (min-width : 800px)
+{
+  body{
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  .slide{
+    position: relative;
+    left: 35%;
+    margin-bottom: 40px;
+    }
+}
+
+/*mobile*/
+@media screen and (max-width : 800px)
+{
+  
+  .slide{
+    position: relative;
+    left: 2px;
+    margin-bottom: 40px;
+    }
+
+}
+
+    
+/*css for mobile screen which also somehow applicable to computer screen*/
+html
+{
+    background: var(--theme-color);
+    border-radius: 5px;
+}
+
+.backButton
+{
+    float: left;
+
+    height: 85px;
+    width: 85px;
+    display: inline-block;
+    border-radius: 48px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    background: var(--theme-color);
+}
+
+.mid-line
+{
+    height: 4px;
+    width: 35px;
+    background-color: var(--theme-color);
+    border-radius: 2px;
+    margin: 2%;
+
+    position: relative;
+    top: 32%;   
+    left: 18%;
+}
+
+.arrowLine
+{
+    height: 4px;
+    width: 20px;
+    background-color: var(--theme-color);
+    border-radius: 2px;
+    margin: 2%;
+    position: relative;
+}
+
+.up
+{
+    top: 32%;   
+    left: 18%;   
+    transform: rotate(-30deg);
+}
+
+.down
+{
+    top: 32%;   
+    left: 18%;   
+    transform: rotate(30deg);
+}
+
+/*options menu button*/
+.optionsMenu
+{
+    float: right;
+
+    height: 85px;
+    width: 85px;
+    display: inline-block;
+    border-radius: 48px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    background: var(--theme-color);
+}
+
+.insideOptionsMenu
+{
+    height: 62px;
+    width: 62px;
+    background-color: var(--main-color);
+    border-radius: 24px;
+    border: 4px solid var(--theme-color);
+  
+
+    position: relative;
+    margin: 3%;
+}
+
+.line
+{
+    height: 5px;
+    width: 30px;
+    background-color: crimson;
+    border-radius: 2px;
+    margin: 2%;
+
+    position: relative;
+    top: 20%;   
+    left: 19%;
+}
+
+.linelong
+{
+    height: 5px;
+    width: 40px;
+    background-color: var(--theme-color);
+    border-radius: 2px;
+    margin: 2%;
+
+    position: relative;
+    top: 20%;   
+    left: 19%;
+}
+
+input:focus
+{
+    outline:none;
+}
+  
+#wrapper h1
+{
+    color: var(--main-color);
+    font-family: "Lobster";
+    margin-bottom: -55px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*css for settings*/
+.mysettings
+{
+    background: var(--theme-color);
+    border-radius: 5px; 
+}
+
+.settings{
+    background: var(--main-color);
+    border-radius: 5px;
+}
+
+.settings p{
+  font-size: 24px;
+  font-family: "Lobster";
+  color: var(--theme-color);
+}
+
+.settings p{
+    display: inline;
+  }
+
+  
+  .settings  button
+{
+  padding-left: 2%;
+  padding-right: 2%;
+  padding: 2%;
+
+  font-size: 18px;
+
+  background-color: var(--theme-color);
+  color: var(--main-color);
+  
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.onlyYouCanSee{
+  background: var(--main-color);
+  border-radius: 5px;
+}
+.onlyYouCanSee p{
+    display: inline;
+  }
+.onlyYouCanSee p{
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--theme-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul{
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--theme-color);
+  
+}
+
+select:focus
+{
+    outline:none;
+}
+
+select
+{
+  padding-left: 2%;
+  padding-right: 2%;
+  padding: 2%;
+
+  font-size: 18px;
+
+  background-color: var(--main-color);
+  color: var(--theme-color);
+  
+  border: 2px solid var(--main-color);
+  border-radius: 5%;
+  
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+
+.onlyYouCanSee button
+{
+  padding-left: 2%;
+  padding-right: 2%;
+  padding: 2%;
+
+  font-size: 18px;
+
+  background-color: var(--theme-color);
+  color: var(--main-color);
+  
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#setprofile
+{
+    padding-left: 2%;
+    padding-right: 2%;
+    padding: 2%;
+  
+    font-size: 18px;
+  
+    background-color: var(--theme-color);
+    color: var(--main-color);
+    
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    
+    cursor: pointer;
+    margin-bottom: 10px;
+      
+}
+
+.main
+{
+  background-color: var(--main-color);
+  color: var(--theme-color);
+  
+  border: 5px;
+  border-radius: 4px;
+  box-shadow: 2px; 
+
+  margin-top: 20px;
+  margin: 12px; 
+
+}
+
+
+.top3input
+{
+  height: auto;
+  width: 50%;
+
+  font-size: 18px;
+  color: var(--theme-color);
+  background: var(--main-color);
+
+  border: 0;
+  border-bottom: 2px solid var(--theme-color);
+}
+
+input:focus {
+    outline:none;
+}
+
+
+.hr-shadow 
+{
+  height: 20px;
+  width: 90%;
+  height: 50px;
+  
+  box-shadow: 0 20px 20px -20px #333;
+  border:none;
+  border-bottom: 1px solid #1f1209;
+  
+  margin-top: 0;
+  margin: -50px 0 10px 0; 
+}
+
+.top-bar
+{
+    background: var(--main-color);
+    border-radius: 5px;
+    margin: 12px; 
+    margin-top: 5%;
+}
+
+.top-bar input
+{
+    display: inline;
+}
+  
+input:focus
+{
+    outline:none;
+}
+  
+.top-bar input
+{
+      height: auto;
+      width: 10%;
+
+      font-size: 18px;
+      color: var(--theme-color);
+      background: var(--main-color);
+    
+      border: 0;
+      border-bottom: 2px solid var(--theme-color);
+      margin: 2%;
+}
+
+  
+.top-bar button
+{
+    height: auto;
+    width: 15%;
+   
+    font-size: 90%; 
+    background-color: var(--theme-color);
+    color: var(--main-color);
+    border: 2px solid var(--theme-color);
+    border-radius: 3%;
+    cursor: pointer;
+    margin: 2%;
+}
+
+/*css for mobile*/
+@media screen and (max-width : 800px)
+{
+
+  body{
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .slide{
+    position: absolute;
+    left: 20%;
+    }
+  .main
+  {
+    margin-top: 10px; 
+  }  
+
+  .top-bar
+  {
+      background: var(--main-color);
+      border-radius: 5px;
+      margin: 12px; 
+      margin-top: 5%;
+  }
+  
+  .top-bar input
+  {
+      display: inline;
+  }
+    
+  input:focus
+  {
+      outline:none;
+  }
+    
+  .top-bar input
+  {
+        height: auto;
+        width: 12%;
+  
+        font-size: 18px;
+        color: var(--theme-color);
+        background: var(--main-color);
+      
+        border: 0;
+        border-bottom: 2px solid var(--theme-color);
+        margin-top: 6%;
+        padding-right: 5%;
+  }
+  
+    
+  .top-bar button
+  {
+      height: auto;
+      width: 20%;
+     
+      font-size: 18px; 
+      background-color: var(--theme-color);
+      color: var(--main-color);
+      border: 2px solid var(--theme-color);
+      border-radius: 3%;
+      cursor: pointer;
+  }
+
+}
+
+

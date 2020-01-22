@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!---------- Code for logo started ---------->
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="images/logo.png">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nestimatic</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Styles -->
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/communicate/profile-page.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/inputfieldofprofile.css" />
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link rel="stylesheet" href="styles/communicate/main-page/post.css">
+        <link rel="stylesheet" href="styles/communicate/main-page/navigation.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/net-connection.css"/>
+    
+        <!--JQuery-->
+        <script src="jquery/jquery-3.2.1.min.js"></script>
+        <script src="jquery/communicate-jquery/profile.js"></script>
+        <script src="jquery/ajax/profile.js"></script>
+        <script src="jquery/communicate-jquery/delete.js"></script>
+        <script src="jquery/communicate-jquery/details.js"></script>
+
+        <script src="jquery/communicate-jquery/like.js"></script>
+
+        <script src="jquery/theme-color.js"></script>    
+        
+    </head>
+    <body>
+            <div class="net-connection">
+                    <p id="ooUpdate" style="text-align: center"></p>
+                 </div>
+
+        <!--Nestimatic Head-->
+        <div id="wrapper">
+            <center>
+                <h1>Communicate</h1>
+                <a href="communicate">
+                    <button id="backbutton" class="backButton">
+                        <div class="insideOptionsMenu">
+                            <div class="arrowLine up"></div>
+                            <div class="mid-line"></div>
+                            <div class="arrowLine down"></div>
+                        </div>
+                    </button>
+                </a> 
+            </center>
+        </div>
+        <div id="settings" class="mysettings">
+            <br><br><br><br><br>
+            <!--Setting up profile image-->
+            <form id="info-form" method="POST" action="communicate" enctype="multipart/form-data">
+                <div class="anyName slide">
+                    <!--old profile -->
+                    <label for="file-input">
+                        <img id="oldProfile" src="<%=data[0].profileimageurl%>" alt="profile">
+                    </label>
+                    
+                    <!--input tag for new file-->
+                    <input id="changeProfile" type="file" name="profile" accept="image/gif, image/jpeg, image/png" required> 
+                </div>
+        
+        <!--profile setting Question-->
+        <div id="profileSetOrNot">
+                <center>
+                    <input id="setprofile" type="submit" value="set">
+                    <button id="cancelProfile">cancel</button><br><br>
+                </center>
+            </div>
+                     
+            </form>    
+        </div>
+       
+        <!--User name and surname-->
+        <div class="settings"><br>
+       
+            <center>
+                <p>* Pratik Patil *</p><br><br>
+                <hr class="hr-shadow">
+            </center><br>     
+      
+        </div>
+
+        <br>
+
+        <!--Only you can see-->
+        <div class="onlyYouCanSee">
+            <br>
+                &nbsp; <p><i>Only you can see ...</i></p> <br>
+
+                <ul>
+                    <li>Theme Color : 
+                        <select name="Color" id="color" onchange="myhighlite(this.value)">
+                            <option value="nestimatic">nestimatic</option>
+                            <option>#2F2F2F</option>
+                            <option>#4C4C4C</option>
+                            <option>Black</option>
+                            <option>red</option>
+                            <option>Blue</option>
+                            <option>Green</option>
+                            <option>crimson</option>
+                            <option>White</option>
+                            <option>Yellow</option>
+                            <option>Brown</option>
+                            <option>Orange</option>
+                            <option>Purple</option>
+                            <option>Skyblue</option> 
+                            <option>Dodgerblue</option>
+                            <option>Lightskyblue</option>
+                            <option>Navy</option>
+                            <option>tan</option>
+                            <option>Violet</option>
+                            <option>Gold</option>
+                        </select>
+            
+                    </li><br>
+                    <div id="colorQuestion">
+                        <center>
+                            <button id="setColor">set</button><button id="cancelColor">cancel</button>
+                        </center>
+                    </div>
+                    
+                    <li> Key : <input type="text" value="<%=data[0].key%>" placeholder="Enter key" name="key" id="key" class="top3input">
+                    </li><br>
+
+                    <div id="keyQuestion">
+                        <center>
+                            <button id="setkey">set</button> <button id="cancelKey">cancel</button>
+                        </center>
+                    </div>
+    
+<br>
+                </ul>
+        </div>
+
+        <!--Only you can see-->
+        <div class="onlyYouCanSee">
+                <br>
+                    &nbsp; <p><i>Your friends can see ...</i></p> <br>
+    
+                    <ul>
+                        <li>
+                        
+                             Mobile : 
+                             <input type="number" value="<%=data[0].mobile%>" placeholder="Mobile number" name="mobile" id="mobile" class="top3input" required>
+                
+                            </li><br>
+
+                            <div id="mobileQuestion">
+                                <center>
+                                    <button id="setmobile">set</button> <button id="cancelMobile">cancel</button>
+                                </center>
+                            </div>
+
+                            <li>Nestimatic ID (NID) : <p><%=data[0].nid%></p>
+                            </li> <br>
+
+                            <li>Posts : </li>
+                        </ul>
+      
+                                <div class="top-bar">
+                                <center>
+                                <input type="number" id="day" name="day" placeholder="DD">
+                               <input type="number" id="month" name="month" placeholder="MM">
+                               <input type="number" id="year" name="year" placeholder="YYYY">
+                               <button id="show">Show</button>
+                               </center><br>
+                               <div id="showingpostswait" class="date-div">
+                                    <center>
+                                           <p>Showing posts...</p> <br>
+                                    </center>
+                                </div>
+                       
+                            </div>
+        
+            </div>
+            <div id="all-posts" class="all-posts">
+
+            </div>
+
+
+       
+        <script src="jquery/jquery-3.2.1.min.js"></script>
+        <script src="jquery/jquery.upload_preview.min.js"></script>
+        <script type="text/javascript">
+            $('.anyName').uploadPreview({
+                width: '200px',
+                height: '200px',
+                backgroundSize: 'cover',
+                fontSize: '16px',
+                borderRadius: '200px',
+                border: '3px solid #dedede',
+                lang: 'en', //language
+            });
+        </script>
+                <script src="jquery/net-connection.js"></script>     
+    </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!---------- Code for logo started ---------->
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="images/logo.png">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nestimatic</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Styles -->
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/communicate/post-page.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/communicate/inputfieldofprofile.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/net-connection.css"/>
+        
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        
+        <!--JQuery-->
+        <script src="jquery/jquery-3.2.1.min.js"></script>
+        <script src="jquery/communicate-jquery/post.js"></script>
+        <script src="jquery/ajax/post.js"></script>
+      
+        <script src="jquery/theme-color.js"></script>    
+      
+    </head>
+    <body>
+            <div class="net-connection">
+                    <p id="ooUpdate" style="text-align: center"></p>
+                 </div>
+        
+        <!--Nestimatic Head-->
+        <div id="wrapper">
+            <center>
+                <a href="communicate">
+                    <button class="backButton">
+                        <div class="insideOptionsMenu">
+                            <div class="arrowLine up"></div>
+                            <div class="mid-line"></div>
+                            <div class="arrowLine down"></div>
+                        </div>
+                    </button>
+                </a>
+        </center>
+        <button id="chooseimagetopost" class="postchoice">Image</button>
+        <button id="choosevideotopost" class="postchoice">Video</button> <br><br>
+        </div>            
+        <br><br>
+             
+        <div id="image" class="mysettings">
+            <form id="image-form" method="POST" action="postimagecommunicate" enctype="multipart/form-data">
+            
+                <div class="anyName">
+                    <input id="selectimage" type="file" name="postimage" accept="image/gif, image/jpeg, image/png" required> 
+                    <span>click to choose <a href="#">pic</a></span>
+                </div>
+                <br>
+                <div class="settings">
+                    <textarea name="imagecomment" id="imagecomment"  onkeyup="auto_grow(this)" placeholder="Say something or Comment ..."></textarea>
+                    <input id="post-image-button" type="submit" value="Post">
+                </div>
+
+            </form><br>
+        </div>
+
+        <div id="video" class="mysettings">
+                <form id="video-form" method="POST" action="postvideocommunicate" enctype="multipart/form-data">
+                
+                    <center>
+                            <video class="videoshow" controls>
+                                    <source src="" id="video_here">
+                                      Your browser does not support HTML5 video.
+                                  </video>                 
+                    </center>
+                  
+                  
+                    <input type="file" name="postvideo" class="file_multi_video inputfile" id="file" accept="video/*" required>
+                    <label for="file">Click to choose a video</label>
+                <br><br> 
+                    <div class="settings">
+                        <textarea name="videocomment" id="videocomment"  onkeyup="auto_grow(this)" placeholder="Say something or Comment ..."></textarea>
+                        <input id="post-video-button" type="submit" value="Post">
+                    </div>
+    
+                </form><br>
+            </div>
+
+       
+       
+        <script src="jquery/jquery-3.2.1.min.js"></script>
+        <script src="jquery/jquery.upload_preview.min.js"></script>
+        <script type="text/javascript">
+            $('.anyName').uploadPreview({
+                width: '200px',
+                height: '200px',
+                backgroundSize: 'cover',
+                fontSize: '16px',
+                border: '3px solid #dedede',
+                lang: 'en', //language
+            });
+            
+            $(document).on("change", ".file_multi_video", function(evt) {
+  var $source = $('#video_here');
+  $source[0].src = URL.createObjectURL(this.files[0]);
+  $source.parent()[0].load();
+});
+        </script>
+                <script src="jquery/net-connection.js"></script>     
+
+    </body>
+</html>

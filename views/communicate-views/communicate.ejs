@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="images/logo3.png">
+
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes"> 
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+        <link rel="apple-touch-icon-precomposed" href="images/logo3.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="images/logo3.png">
+        <meta name="msapplication-TileColor" content="#3372DF">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+         
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Communicate</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--Font Awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--Jquery min.js-->
+        <script src="jquery/jquery-3.2.1.min.js"></script>
+        <!--Google font-->
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+        <!--Animations-->
+        <script src="jquery/communicate-jquery/communicate.js"></script>
+
+        <!--This contion socket so it is at top-->
+        <script src="jquery/communicate-jquery/like.js"></script>
+
+        <!--Ajax-->
+        <script src="jquery/communicate-jquery/byDefaultPosts.js"></script>
+        <script src="jquery/communicate-jquery/date.js"></script>
+        <script src="jquery/communicate-jquery/notification.js"></script>
+        <script src="jquery/ajax/notification.js"></script>
+        <script src="jquery/communicate-jquery/comment.js"></script>
+        <script src="jquery/communicate-jquery/delete.js"></script>
+        <script src="jquery/communicate-jquery/details.js"></script>
+        
+    
+        <!--Styles-->
+            
+        <!--Styles for computer-->
+        <link rel="stylesheet" href="styles/communicate/main-page/communicate.css">
+        <link rel="stylesheet" href="styles/communicate/main-page/navigation.css">
+        <link rel="stylesheet" href="styles/communicate/main-page/notification.css">
+        <link rel="stylesheet" href="styles/communicate/main-page/post.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/net-connection.css"/>
+
+
+        <!--Styles for computer-->
+        <link rel="stylesheet" href="styles/communicate/main-page/mobile/communicate.css">
+        <link rel="stylesheet" href="styles/communicate/main-page/mobile/navigation.css">
+
+        <script src="jquery/theme-color.js"></script>    
+      
+    </head>
+    <body>
+            <div class="net-connection">
+                    <p id="ooUpdate" style="text-align: center"></p>
+                 </div>
+         
+        <div id="newactivity">
+                <center>
+                        <button >New Activities</button><br>
+                </center>
+        </div>
+        
+        <!--Communicate Head-->
+        <div id="wrapper">
+            <center>
+                <h1 id="headnamepost">Communicate</h1>
+                <a href="nestimatic">
+                    <button id="backbutton" class="backButton">
+                        <div class="insideOptionsMenu">
+                            <div class="arrowLine up"></div>
+                            <div class="mid-line"></div>
+                            <div class="arrowLine down"></div>
+                        </div>
+                    </button>
+                </a>
+                    
+                <a href="profile">
+                    <button id="profilelink" class="optionsMenu">
+                        <div class="insideOptionsMenu">
+                            <div class="linelong"></div>
+                            <div class="linelong"></div>
+                            <div class="linelong"></div>
+                        </div>
+                    </button>
+                </a>
+            </center><br><br>
+        </div>
+        <!--Communicate head ended-->
+        
+        <div class="navigation-bar"><br>
+            <center>
+                <button id="showDateDiv">Date</button>
+                <button id="showCommentDiv">Comment</button>
+                <a href="post"><button id="postlink">Post</button></a>
+                <a href="friends"><button id="friendslink">Friends</button></a>
+           <!--     <i id="showNotification" class="fa fa-bell-o" style="font-size:24px;color:#8080ff;cursor: pointer;"></i>       
+                <i id="showNotificationSocket" class="fa fa-bell" style="font-size:24px;color:#8080ff;cursor: pointer;"></i>       -->
+            </center>
+        </div>
+
+                <div id="refreshlikes" class='refreshlikes post'>
+                    <center>
+                        <p id="refreshlikespara">Refresh to see new likes.....</p>
+                    </center>
+                </div>
+      
+        <div id="date-div" class="date-div"><br>    
+            <!--Taking current date from backend-->         
+            <% var date = finaldate.split('-'); 
+            var day = parseInt(date[2]) 
+            var month = parseInt(date[1]) 
+            var year =  parseInt(date[0]) %>
+            
+            <center>
+                <input type="number" id="day" name="day" value="<%=day%>" placeholder="DD">
+                <input type="number" id="month" name="month" value="<%=month%>" placeholder="MM">
+                <input type="number" id="year" name="year" value="<%=year%>" placeholder="YYYY">
+                <button id="show">Show</button>
+                <button id="cancelDate">Cancel</button>
+             </center>
+
+             <div id="showingpostswait" class="date-div">
+                 <center>
+                        <p>Showing posts...</p> <br>
+                 </center>
+             </div>
+        </div>
+
+        <div id="comment-div" class="comment-div">
+            <textarea placeholder="'Quote' or comment here ..." name="commentpara" id="commentpara" cols="30" rows="2" onkeyup="auto_grow(this)"></textarea>
+            <br> 
+            <button id="cancelComment">Cancel</button>
+            <button id="makeComment">Comment</button>
+        </div>
+        <br><br>
+
+        <div class="notificationcontainer" id="notificationcontainer">
+      <!--      <button class="removeButton" id="hideNotification">Hide</button> 
+            <p>Notifications</p> 
+            <hr class="hr-shadow"> 
+            
+            <button class="removeButton all" id="removeAll">Remove All</button><br><br><br>
+      -->
+            <div id="notificationcollection">
+            </div>
+        </div>
+
+        
+        <div id="all-posts" class="all-posts">
+        <!--all posts ended here this is the end of parent div of all posts.-->
+        
+        
+          
+        </div>
+        
+        <script src="jquery/net-connection.js"></script>     
+    </body>
+</html>

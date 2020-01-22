@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!---------- Code for logo started ---------->
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="images/logo-nestimatic.png">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nestimatic</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--styles -->
+  <link rel="stylesheet" type="text/css" media="screen" href="styles/index.css" />
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">   
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/net-connection.css"/>
+        <!--JQuery-->
+  <script src="jquery/jquery-3.2.1.min.js"></script>
+<script src="jquery/index.js"></script>
+             <script src="jquery/theme-color.js"></script>     
+
+    <!--    <script>
+                // if the technology is supported by browser
+                if('serviceWorker' in navigator) {
+                  navigator.serviceWorker.register('/serviceworker.js');
+                }
+                </script>
+                
+        <script>
+     if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('js/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}   </script>
+     <script src="js/sw.js"></script>-->
+      
+     
+
+    </head>
+    <body>
+            <div class="net-connection">
+                    <p id="ooUpdate" style="text-align: center"></p>
+                 </div>
+
+        <div class="main">
+                <center>
+                <h1 id="floatLogo" style="display:none;">Nestimatic</h1>
+                <p class="tagline" id="tagline" style="display:none;">Making your life systematic !</p>
+                <div class="blue-line"></div>
+            </center>
+
+            <div id="moreinfo" style="display:none;">
+                <p>we provide you three services by which</p>
+                <ul>
+                    <li>You can find out <strong>who loves</strong>  you.</li>
+                    <li><strong>Communicate</strong> with close friends & family.</li>
+                    <li>Change your <strong>mood</strong> instantly.</li>
+                </ul>
+            </div>
+            <center>
+                <div class="blue-line"></div>
+         
+            </center>
+                
+            <div id="sign-in-div" style="display:none;">
+                <center>
+                    <p>To use our services, you just need to </p>
+                    <a href="/auth/google"><button id="sign-in">Sign-in Google</button></a>
+                </center>    
+            </div>
+
+            <form id="email-form" method="POST" action="info">
+                <input type="text" name="useremail" /> 
+                <input type="submit" value="submit" />
+            </form>
+             <center>
+                <hr class="hr-shadow"> 
+       
+        </center>
+        <p> <i>Forgot signed in gmail ?</i> </p>
+
+             <br>
+
+            &nbsp; <span style="cursor: pointer;" id="forgot-text" class="text-in-the-div"><i>forgot sign-in gmail ?</i></span>  	 
+           <br>  <br>
+            <div id="forgot-div" class="login"><hr class="hr-shadow"><br>
+            	<span class="text-in-the-div"><center><i><strong>Enter OTP & New password</strong></i>
+            	<img id="up-arrow" class="up-arrow" src="images/up.png"></center></span><br>
+		    	<form action="home.html">
+     				<center>
+            			<input  type="text"     class="top-field" placeholder=" E-mail"><br><br>
+              			<button                 class="buttons"   >Send me O.T.P.</button><br><br>
+              			<input  type="number"     class="fields"    placeholder=" Enter OTP"   ><br><br>
+          				<input  type="password" class="fields"    placeholder=" New password"><br><br>
+          				<input  type="password" class="fields"    placeholder=" Confirm new password"><br><br>
+          				<input  type="submit"   class="buttons"   value="Login">
+          			</center>
+          		</form>
+          	</div>
+           
+        </div>
+        <script src="jquery/net-connection.js"></script>   
+    </body>
+</html>

@@ -1,0 +1,227 @@
+:root{
+    --theme-color: #8080ff;
+    --main-color: white;
+}
+
+@media screen and (min-width : 800px)
+{
+
+  body{
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
+
+html{
+    background: var(--theme-color);
+    border-radius: 5px;
+}
+
+/*options back button*/
+.backButton
+{
+    float: left;
+
+    height: 85px;
+    width: 85px;
+    display: inline-block;
+    border-radius: 48px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    background: var(--theme-color);
+}
+
+.mid-line{
+    height: 4px;
+    width: 35px;
+    background-color: var(--theme-color);
+    border-radius: 2px;
+    margin: 2%;
+
+    position: relative;
+    top: 32%;   
+    left: 18%;
+    
+}
+.arrowLine{
+    height: 4px;
+    width: 20px;
+    background-color: var(--theme-color);
+    border-radius: 2px;
+    margin: 2%;
+
+    position: relative;
+}
+
+.up{
+    top: 32%;   
+    left: 18%;   
+    transform: rotate(-30deg);
+}
+
+.down{
+    top: 32%;   
+    left: 18%;   
+    transform: rotate(30deg);
+}
+
+/*options menu button*/
+.optionsMenu
+{
+    float: right;
+
+    height: 85px;
+    width: 85px;
+    display: inline-block;
+    border-radius: 48px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    background: var(--theme-color);
+}
+
+.insideOptionsMenu
+{
+    height: 62px;
+    width: 62px;
+    background-color: var(--main-color);
+    border-radius: 24px;
+    border: 4px solid var(--theme-color);
+  
+
+    position: relative;
+    margin: 3%;
+}
+
+.line
+{
+    height: 5px;
+    width: 30px;
+    background-color: crimson;
+    border-radius: 2px;
+    margin: 2%;
+
+    position: relative;
+    top: 20%;   
+    left: 19%;
+}
+
+.linelong
+{
+    height: 5px;
+    width: 40px;
+    background-color: var(--theme-color);
+    border-radius: 2px;
+    margin: 2%;
+
+    position: relative;
+    top: 20%;   
+    left: 19%;
+}
+textarea:focus{
+    outline: none;
+}
+input:focus{
+    outline:none;
+}
+  
+#wrapper h1{
+    color: var(--main-color);
+    font-family: "Lobster";
+    margin-bottom: -55px;
+}
+
+  /*css for apps*/
+.myfeedback
+{
+    background: var(--theme-color);
+    border-radius: 5px; 
+}
+
+.feedback{
+    background: var(--main-color);
+    border-radius: 5px;
+    margin: 12px; 
+}
+
+.feedback h1{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid var(--theme-color);
+    border-radius: 5px;
+
+    color: var(--theme-color);
+    padding-top: 3%;
+    padding-left: 8%; 
+    padding-bottom: 4%;
+}
+
+.feedback p{
+   color: var(--theme-color);
+   font-size: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+   padding-left: 2%;
+   padding-top: 1px;
+   margin-top: 2%;
+   margin-bottom: -1%;
+}
+
+.feedback input{
+    cursor: pointer;
+    float: right;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--theme-color);
+    color: var(--main-color);
+    border: 2px solid var(--theme-color);
+    
+    width: 40%;
+    font-size: 120%; 
+    
+    border-radius: 3%;
+    margin-right: 2%;
+}
+
+.feedback textarea{
+    width: 90%;
+    font-size: 130%;
+    color: var(--theme-color);
+  
+    margin-bottom: 4%;
+    border-radius: 10px;
+    border: 4px solid var(--theme-color);
+}
+
+.questions{
+    border: 2px solid var(--theme-color);
+    border-radius: 5px; 
+    padding-bottom: 4%;
+    margin: 3%;
+}
+.questions h2{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid var(--theme-color);
+    border-radius: 5px;
+
+    color: var(--theme-color);
+    padding-top: 0;
+    padding-left: 2%;
+    padding-bottom: 4%;
+}
+
+.questions p{
+    font-size: 15px;
+    display: inline;
+    border-radius: 5px;
+    padding: 2%;
+    padding-left: 6%;
+    padding-right: 6%;
+    margin: 2%;
+
+}
+
+input:focus{
+    outline: none;
+}

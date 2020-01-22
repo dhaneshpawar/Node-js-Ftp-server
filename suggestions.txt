@@ -1,0 +1,52 @@
+user should be able to send friend request to someone is in the liked by section of 
+any of his friends post 
+
+that means if the user click on the name of the user which on the post , he will be
+directly able to see his profile 
+but if the user click on the name of the user in the likes section 
+then we have to first check that is he friend of this logged in user or not 
+if yes then show its profile,
+and if no then directly take the user to the friends page , 
+insert the name of that person into search box automatically  
+and show the user that person as a search result.
+
+show
+"sorry , something went wrong , click here to back to the main page "
+this message when someone enters url other than we needed , handle that situation in vue
+and dont's allow any request through url instead of index 
+ 
+that is in nodejs 
+there will be only one url request to return a page and that will be the index page 
+
+if user make any other request like home and other urls he will get another error 
+because those urls that come into the url bar, we are not going to define them 
+we are going to define separate urls for ajax request and even if hacker made
+those request from the browser he will get only json data and in it there will 
+be only client encrypted ids 
+
+ 
+ siddhesh -
+contacts from google
+search posts by date instead of date button on coomunicate
+equence of buttons on communicate - friends , post , comment , date 
+home button to go to home screen of nestimatic
+youtube video for add to home screen
+
+jaypal
+communicate profiels details 
+add date of birth 
+add educational information 
+
+change font of text along with color
+provide both color control - user should be able to change both the colors
+comment or message along with proposal
+
+
+by default post in nestimatic
+
+two viewes in nestimatic - carousal and normal timiline view
+s 
+three dots of communicate post below the proposal yousent block of mindmatch where it weill show delte proposal option whhen clicked
+
+
+back to prevois position when clicked on new activiteis notification

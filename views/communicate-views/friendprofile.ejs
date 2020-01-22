@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!---------- Code for logo started ---------->
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="images/logo.png">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nestimatic</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Styles -->
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/communicate/profile-page.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/inputfieldofprofile.css" />
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link rel="stylesheet" href="styles/communicate/main-page/post.css">
+        <link rel="stylesheet" href="styles/communicate/main-page/navigation.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/net-connection.css"/>
+
+
+        <!--JQuery-->
+        <script src="jquery/jquery-3.2.1.min.js"></script>
+        <script src="jquery/communicate-jquery/profile.js"></script>
+        <script src="jquery/ajax/profile.js"></script>
+        <script src="jquery/communicate-jquery/like.js"></script>
+
+
+        <script src="jquery/theme-color.js"></script>            
+      
+    </head>
+    <body>
+            <div class="net-connection">
+                    <p id="ooUpdate" style="text-align: center"></p>
+                 </div>
+
+        <!--Nestimatic Head-->
+        <div id="wrapper">
+            <center>
+                <h1>Communicate</h1>
+                <a href="communicate">
+                    <button id="backbutton" class="backButton">
+                        <div class="insideOptionsMenu">
+                            <div class="arrowLine up"></div>
+                            <div class="mid-line"></div>
+                            <div class="arrowLine down"></div>
+                        </div>
+                    </button>
+                </a>
+                   
+            </center>
+        </div>
+             
+        <div id="settings" class="mysettings">
+            <br><br><br><br><br>
+        
+            <!--Setting up profile image-->
+            <form id="info-form" method="POST" action="communicate" enctype="multipart/form-data">
+                <div class="anyName slide">
+                    <label for="file-input">
+                        <img src="<%=data[0].profileimageurl%>" alt="profile">
+                    </label>
+                </div>
+            </form>    
+        </div>
+       
+        <!--User name and surname-->
+        <div class="settings"><br>
+            <center>
+                <p>* <%=data[0].firstname.charAt(0).toUpperCase()+data[0].firstname.slice(1)%> <%=data[0].lastname.charAt(0).toUpperCase()+data[0].lastname.slice(1)%>  *</p><br><br>
+                <hr class="hr-shadow">
+            </center><br>     
+        </div>
+
+        <br>
+
+       
+        <!--Only you can see-->
+        <div class="onlyYouCanSee">
+                <br>
+       
+                    <ul>
+                        <li>
+                        
+                             Mobile : <p><%=data[0].mobile%></p>
+                            </li><br>
+                            <li>Nestimatic ID (NID) :        <p id="frienduserid"><%=data[0].nid%></p>
+                            </li> <br>
+                            <li>Posts : </li>
+                        </ul>
+      
+                                <div class="top-bar">
+                                <center>
+                                <input type="number" id="day" name="day" placeholder="DD">
+                               <input type="number" id="month" name="month" placeholder="MM">
+                               <input type="number" id="year" name="year" placeholder="YYYY">
+                               <button id="showfriend">Show</button>
+                               </center><br>
+                              
+                               <div id="showingpostswait" class="date-div">
+                                    <center>
+                                           <p>Showing posts...</p> <br>
+                                    </center>
+                                </div>
+                       
+                            </div>
+                        </div>
+                
+                            <div id="all-posts" class="all-posts">
+
+                       
+                            </div>
+                            
+                            <script src="jquery/net-connection.js"></script>     
+  </body>
+</html>

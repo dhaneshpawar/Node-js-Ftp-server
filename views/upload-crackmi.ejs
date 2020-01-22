@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!---------- Code for logo started ---------->
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="images/logo.png">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nestimatic</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+        <!--Styles -->
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/upload-crackmi.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/net-connection.css"/>
+
+        <!--jquery-->
+        <script src="jquery/jquery-3.2.1.min.js"></script>
+        <script src="jquery/upload-crackmi.js"></script>
+
+
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <script src="jquery/theme-color.js"></script>    
+
+
+    </head>
+    <body>
+            <div class="net-connection">
+                    <p id="ooUpdate" style="text-align: center"></p>
+                 </div>
+
+        <!-- Head -->
+        <div id="wrapper">
+            <center>
+                <h1>CrackMi</h1>
+                <a href="crackmi">
+                    <button class="backButton">
+                        <div class="insideOptionsMenu">
+                            <div class="arrowLine up"></div>
+                            <div class="mid-line"></div>
+                            <div class="arrowLine down"></div>
+                        </div>
+                    </button>
+                </a>
+            </center><br><br>
+        </div>
+        
+        <div class="main">
+            <br><br>
+            <p id="uploaded-line" class="bottom-p">Thank you so much for your contribution !</p><br>
+
+            <form id="content-form" method="POST" action="uploadcontentcrackmi" enctype="multipart/form-data">
+                   
+                <center>
+                    <div class="slide">
+                        <input id="srcofcontent" name="srcofcontent" type="file"  accept="video/*">        
+                    </div><br>
+                </center>
+                <br>
+                <center>
+                    <p class="bottom-p">Select mood for which this vedio is made</p>      
+                    <select name="mood" id="mood">
+                        <option value="sad">Sad</option>
+                        <option value="demotivated">Demotivated</option>
+                        <option value="angry">Angry</option>
+                        <option value="boared">Boared</option>
+                        <option value="stressed">Stressed</option>
+                        <option value="depressed">Depressed</option>
+                        <option value="frustrated">Frustrated</option>
+                        <option value="irritated">Irritated</option>
+                    </select>
+                    <p class="bottom-p">Select reason for which this vedio is made</p>                   
+                    <select name="reason" id="reason">
+                        <option value="family">Family</option>
+                        <option value="friends">Friends</option>
+                        <option value="relationship">Relationship</option>
+                        <option value="business">Business</option>
+                        <option value="education">Education</option>
+                        <option value="job">Job</option>
+                        <option value="marriage">Marriage</option>
+                        <option value="love">Love</option>
+                        <option value="failture">Failture</option>
+                        <option value="financial">Financial</option>
+                        <option value="quarrel">Quarrel</option>
+                        <option value="death of someone">Death of someone</option>
+                    </select>
+                    
+
+                </center>
+                <center> <br>
+                    <input id="upload-button" type="submit" value="Upload" class="submitButton">
+               </center>
+            </form>
+        </div>
+  
+        <script src="jquery/net-connection.js"></script>     
+    </body>
+</html>

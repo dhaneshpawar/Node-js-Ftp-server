@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--code fot logo-->
+        <meta name="mobile-web-app-capable" content="yes">
+            <link rel="icon" sizes="192x192" href="images/logo.png">
+    
+        <!--Other code started-->
+        <title>Nestimatic</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Styles  -->
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/settings.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/net-connection.css"/>
+
+        <script src="jquery/jquery-3.2.1.min.js"></script>
+        <script src="jquery/settings.js"></script>
+
+        <script src="jquery/theme-color.js"></script>    
+
+    </head>   
+    <body>
+            <div class="net-connection">
+                    <p id="ooUpdate" style="text-align: center"></p>
+                 </div>
+
+        <!--Nestimatic Head-->
+        <div id="wrapper">
+            <center>
+                <h1 id="floatLogo" style="display:none;">Nestimatic</h1>
+                <a href="nestimatic">
+                    <button id="backbutton" class="backButton">
+                        <div class="insideOptionsMenu">
+                            <div class="arrowLine up"></div>
+                            <div class="mid-line"></div>
+                            <div class="arrowLine down"></div>
+                        </div>
+                    </button>
+                </a>
+                
+            </center><br><br>
+        </div>
+        <!--Settings div-->
+        <div id="settings" class="mysettings"><br>
+            
+            <!--nestimatic id-->
+            <div class="settings">
+                <h1>Your NID (Nestimatic ID) -</h1>
+                <center><p><%= usernid %></p></center>    
+                <p>here add three dots which will give the description...</p>
+            </div>
+            
+            <!--sign in with gmail-->
+            <div class="settings">
+                <h1>You are signed in with - </h1>
+                <center><p><%= usergmail %></p></center>
+            </div>
+    
+            <!--feedback and help-->
+            <div class="settings">
+                <h1>Feedback and Help - </h1>
+                <center>
+                   <a href="help"> <button id="help-button">Help</button></a>
+                   <a href="feedback"><button id="feedback-button">Feedback</button></a> 
+                </center>                
+            </div>
+
+            <!--Terms and privacy policy--> 
+            <div class="settings">
+                <h1>Terms and privacy policy - </h1>
+                <center>
+                    <a href="terms"><button id="termsbutton">Terms</button></a> 
+                    <a href="privacy"><button id="privacybutton">Privacy</button></a>
+                </center>                
+            </div>
+            
+            <!--sign out--> 
+            <div class="settings">
+                <h1>Sign Out - </h1>
+                <center>
+                    <a href="/signout"><button id="signout">Sign out</button></a>
+                </center>                
+            </div><br>
+        <!--End of settings div-->
+        </div>  
+        
+        <script src="jquery/net-connection.js"></script>                
+    </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="images/logo3.png">
+
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes"> 
+         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+         <link rel="apple-touch-icon-precomposed" href="images/logo3.png">
+
+         <!-- Tile icon for Win8 (144x144 + tile color) -->
+         <meta name="msapplication-TileImage" content="images/logo3.png">
+         <meta name="msapplication-TileColor" content="#3372DF">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>communicate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--style, jquery and javascript -->
+    <link rel="stylesheet" href="styles/communicate/friends-page.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/net-connection.css"/>
+    <!--
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/help.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/feedback.css"/>
+    -->
+    <script src="jquery/jquery-3.2.1.min.js"></script>
+    <script src="jquery/ajax/friends.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+    <script src="jquery/theme-color.js"></script>    
+
+</head>
+<body>
+        <div class="net-connection">
+                <p id="ooUpdate" style="text-align: center"></p>
+             </div>
+
+ <!--Nestimatic Head-->
+ <div id="wrapper">
+    <center>
+        <h1>Communicate</h1>
+        <a href="communicate">
+            <button id="backbutton" class="backButton">
+                <div class="insideOptionsMenu">
+                    <div class="arrowLine up"></div>
+                    <div class="mid-line"></div>
+                    <div class="arrowLine down"></div>
+                </div>
+            </button>
+        </a>
+       </center><br><br>
+</div>
+
+ <!--Settings div-->
+ <div id="settings" class="mysettings"><br>
+   
+
+    <!--nestimatic id-->
+    <div class="settings">
+
+            <input type="search" id="search-box"  placeholder="Search name here...">
+            
+            <div id="search-button" class="search-icon">
+                <div class="search-circle"></div>
+                <div class="search-line"></div>
+            </div><br>
+
+            <div id="searching">
+                    <center>
+                            <p>Searching ...</p>
+                    </center>
+                </div>
+            
+            
+        <div id="apendSearchResults">
+            <div id="proposalSentDiv">
+                <center>
+                    <p>Request sent</p><br><br>
+                </center>
+            </div>
+        </div>
+    </div>
+
+   
+    <div  class="privacy">
+        <h1>
+            My Friends - 
+            <button id="show" >Show</button>
+            <button id="hide" >Hide</button>  
+        </h1><br><br>
+
+<div id="privacy-notes">
+
+    <%
+    if(data == '')
+    {%>
+        <div id='search-results'>
+             <center><p>No friends</p></center> <br>   
+            </div>
+      
+   <% }
+    %>
+
+<%        for(var j=0; j < data.length; j++)
+        {%>
+
+        
+<div id="<%=data[j].nid%>block">
+ <div id='search-results'>
+ <img src='<%= data[j].profileimageurl %>'>
+ <p>NID : <%=data[j].nid%></p>
+ <p><%=data[j].firstname%></p>            
+ <p><%=data[j].lastname%></p>       
+ <button id='<%=data[j].nid%>' onclick='unfriend(this.id)'>UnFriend</button>   
+</div>
+</div>
+       <% }%>      
+    </div>
+    </div>
+
+ <!--    <div  class="privacy">
+        <h1>
+            Friends of friends - 
+            <button id="showsuggetion" >Show</button>
+            <button id="hidesuggetion">Hide</button>
+        </h1><br> <br>
+
+       <div id="suggetions">
+            <br>
+            <center>
+                    <button id="nextsuggetion">Next</button>
+            </center>
+        </div>
+
+    </div>-->
+
+</div>
+<script src="jquery/net-connection.js"></script>     
+</body>
+</html>

@@ -1,0 +1,274 @@
+:root{
+    --theme-color: #8080ff;
+    --main-color: white;
+}
+
+/**computer*/    
+@media screen and (min-width : 800px)
+{
+  body{
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
+
+/*mobile*/
+@media screen and (max-width : 800px)
+{
+    body{
+        margin-left: 2%;
+        margin-right: 2%;
+      }
+}
+
+
+textarea{
+    display: inline;
+}
+textarea:focus
+{
+    outline: none;
+}
+textarea{
+    height: 20px;
+    width: 70%;
+
+    font-size: 16px;
+    color: var(--theme-color);
+    background: var(--main-color);
+ 
+    border: 0;
+    border-bottom: 2px solid var(--theme-color);
+    margin: 2%;
+
+    resize: none;
+    overflow: hidden;
+    min-height: 16px;
+    max-height: 200px; 
+
+    padding-bottom: -50px;
+}
+
+
+input:focus
+{
+    outline:none;
+}
+  
+
+/*css for settings*/
+.mysettings
+{
+    background: var(--theme-color);
+    border-radius: 5px; 
+}
+
+.settings{
+    background: var(--main-color);
+    border-radius: 5px;
+}
+
+.settings p{
+  font-size: 24px;
+  font-family: "Lobster";
+  color: var(--theme-color);
+}
+
+.settings input{
+    height: auto;
+    width: 15%;
+   
+    float: right;
+    font-size: 90%; 
+    background-color: var(--theme-color);
+    color: var(--main-color);
+    border: 2px solid var(--theme-color);
+    border-radius: 3%;
+    cursor: pointer;
+
+    margin-top: 2%;
+    margin-right: 5%;
+}
+
+.mysettings input{
+    height: auto;
+    width: 15%;
+   
+    font-size: 90%; 
+    background: var(--theme-color);
+    color: var(--main-color);
+    border: 2px solid var(--theme-color);
+    border-radius: 3%;
+    cursor: pointer;
+
+}
+
+.videoshow{
+    height: 250px;
+    width: 90%;
+    border-radius: 5px;
+}
+
+/*video input field*/
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+    height: auto;
+    width: 15%;
+   
+    font-size: 90%; 
+    background: var(--theme-color);
+    color: var(--main-color);
+    border: 2px solid var(--theme-color);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.inputfile:focus + label {
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*arrow at the top*/
+/*css for mobile screen which also somehow applicable to computer screen*/
+html
+{
+    background: var(--theme-color);
+    border-radius: 5px;
+}
+
+#wrapper h1
+{
+    color: var(--main-color);
+    font-family: "Lobster";
+    margin-bottom: -55px;
+}
+.postchoice{
+    height: auto;
+    width: 15%;
+   
+    float: right;
+    font-size: 90%; 
+    background-color: var(--main-color);
+    color: var(--theme-color);
+    border: 2px solid var(--main-color);
+    border-radius: 3px;
+    cursor: pointer;
+
+    margin-top: 2%;
+    margin-right: 5%;
+    
+}
+
+.backButton
+{
+    float: left;
+
+    height: 85px;
+    width: 85px;
+    display: inline-block;
+    border-radius: 48px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    background: var(--theme-color);
+}
+
+.mid-line
+{
+    height: 4px;
+    width: 35px;
+    background-color: var(--theme-color);
+    border-radius: 2px;
+    margin: 2%;
+
+    position: relative;
+    top: 32%;   
+    left: 18%;
+}
+
+.arrowLine
+{
+    height: 4px;
+    width: 20px;
+    background-color: var(--theme-color);
+    border-radius: 2px;
+    margin: 2%;
+    position: relative;
+}
+
+.up
+{
+    top: 32%;   
+    left: 18%;   
+    transform: rotate(-30deg);
+}
+
+.down
+{
+    top: 32%;   
+    left: 18%;   
+    transform: rotate(30deg);
+}
+
+.insideOptionsMenu
+{
+    height: 62px;
+    width: 62px;
+    background-color: var(--main-color);
+    border-radius: 24px;
+    border: 4px solid var(--theme-color);
+  
+
+    position: relative;
+    margin: 3%;
+}

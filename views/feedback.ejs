@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--code for logo-->
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="images/logo.png">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nestimatic</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--style, jquery and javascript -->
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/feedback.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/net-connection.css"/>
+
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <script src="jquery/theme-color.js"></script>    
+
+    </head>
+    <body>
+            <div class="net-connection">
+                    <p id="ooUpdate" style="text-align: center"></p>
+                 </div>
+
+        <!--Nestimatic Head-->
+        <div id="wrapper">
+            <center>
+                <h1>Nestimatic</h1>
+                <!--back button-->
+                <a href="nestimatic">
+                    <button class="backButton">
+                        <div class="insideOptionsMenu">
+                            <div class="arrowLine up"></div>
+                            <div class="mid-line"></div>
+                            <div class="arrowLine down"></div>
+                        </div>
+                    </button>
+                </a>
+                      </center><br><br>
+        </div>
+        <!--feedback started-->
+        <div id="feedback" class="myfeedback"><br>
+            <div class="feedback">
+                <h1>Feedback</h1>
+                <center>
+                    <form id="info-form" method="POST" action="nestimaticfromfeedback">
+                    <textarea placeholder="Describe your feedback ..." name="feedbackpara" id="" cols="30" rows="12"></textarea>
+                    <input type="submit" value="Submit"/>
+                </center>
+                <br><br>
+                <!--feedback from other users-->
+                <center>
+                    <p>Feedback from other users.</p><br>
+                </center>
+                
+                
+                <!--feedback of users-->
+                <%for(var i=1; i< feedbacksOfUsers.length; i++){ %>
+             
+                <div class="questions">
+                         
+                        <h2>NID: <%= feedbacksOfUsers[i].nid %>, <%= feedbacksOfUsers[i].firstname%> 
+                        <%= feedbacksOfUsers[i].lastname%></h2>
+                        <center>
+                            <p><%= feedbacksOfUsers[i].feedback %></p>
+                        </center>
+                </div>
+                <%}%><br><br>
+            </div><br>
+        </div>
+
+        <script src="jquery/net-connection.js"></script>     
+    </body>
+</html>

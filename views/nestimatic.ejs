@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!---------- Code for logo and PWA started ---------->
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="192x192" href="images/logo-nestimatic.png">
+
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes"> 
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+        <link rel="apple-touch-icon-precomposed" href="images/logo-nestimatic.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="images/logo-nestimatic.png">
+        <meta name="msapplication-TileColor" content="#3372DF">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+       
+        <!--Other code started-->
+        <title>Nestimatic</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="manifest.json">
+       
+        <!-- Styles  -->
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/nestimatic.css"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="styles/net-connection.css"/>
+
+        <!--including JQuery for nestimatic-->
+        <script src="jquery/jquery-3.2.1.min.js"></script>
+        <script src="jquery/nestimatic.js"></script>
+
+        <!--Google font integration for nestimatic head-->
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <script src="jquery/theme-color.js"></script>
+    
+    </head>
+    
+    <body>
+            <div class="net-connection">
+                    <p id="ooUpdate" style="text-align: center"></p>
+                 </div>
+      
+        <!--Top full screen pop.-->
+        <div id="DivFullScreen" class="myapps" style="display:none;"><br>
+            <div class="apps">
+                <h1>Full Screen is always awesome !</h1>
+                <center><p>- Press F11 for best experience of Nestimatic.</p></center>
+                <!--open button-->
+                <button id="okFullScreen">Got it</button><br><br>
+            </div>
+       </div>
+       <!--PWA screen pop.-->
+       <div id="DivPwa" class="myapps" style="display:none;"><br>
+        <div class="apps">
+            <h1>To use Nestimatic App</h1>
+            <img src="images/add-to-home-screen.jpg" height="612px" width="100%" alt="add-to-home-screen">
+            <p>1. Click on three dots on corner.</p>
+            <p>2. Click on "Add to Home Screen".</p>
+
+            <!--    <center><p>In your browser click on Options and then click on "Add to home screen".</p></center>-->
+            <!--open button-->
+            <button id="okPwa">Got it</button><br><br>
+        </div>
+   </div> 
+       <!--Nestimatic Head-->
+        <div id="wrapper">
+            <center>
+                <h1 id="floatLogo" style="display:none;">Nestimatic</h1>
+                <a href="settings">
+                    <button id="settings" class="optionsMenu">
+                        <div class="insideOptionsMenu">
+                            <div class="linelong"></div>
+                            <div class="linelong"></div>
+                            <div class="linelong"></div>
+                        </div>
+                    </button>
+                </a>
+            </center><br><br>
+
+            </div>
+     
+        <!--My apps -->
+        <div id="apps" class="myapps"><br>
+        
+            <!--first app - Mindmatch-->    
+            <div class="apps">
+                <h1>MindMatch</h1>
+                <center>
+                    <p>- To find out who loves you.</p>
+                </center>
+                <!--open button-->
+                <a href="mindmatch"><button id="openmindmatch">Open</button></a><br><br>
+            </div>
+    
+            <div class="apps">
+                <h1>Communicate</h1>
+                <center>
+                    <p>- To Communicate with your close friends and family.</p>
+                </center>
+                <a href="communicate"><button id="opencommunicate">Open</button></a><br><br>
+            </div>
+
+            <div class="apps">
+                <h1>CrackMi</h1>
+                <center>
+                    <p>- To change your mood.</p>
+                </center>
+                <a href="crackmi" id="opencrackmi"><button>Open</button></a><br><br>
+            </div><br>
+        <!--End of myapps-->    
+        </div>
+ 
+        <script src="jquery/net-connection.js"></script>     
+    </body>
+</html>
